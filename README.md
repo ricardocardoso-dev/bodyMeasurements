@@ -13,7 +13,7 @@ Body Measurements is a solution to track and manage your body measurements conve
 
 ## Technologies Used
 
-<h3>Back-End</h3>  
+<h3>Back-End (API) </h3>  
 
 - ![.NET Version](https://img.shields.io/badge/.NET_Core-8.0-purple)
 - ![.NET Version](https://img.shields.io/badge/CSharp-12.0-purple)
