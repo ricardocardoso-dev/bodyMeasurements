@@ -7,7 +7,7 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/ricardocardoso-dev/bodyMeasurements?color=brightgreen)](https://github.com/ricardocardoso-dev/bodyMeasurements/commits/main)
 ![Lines of code](https://tokei.rs/b1/github/ricardocardoso-dev/bodyMeasurements?category=code)
 ![Files](https://tokei.rs/b1/github/ricardocardoso-dev/bodyMeasurements?category=files)
-[![wakatime](https://wakatime.com/badge/user/957be417-f277-4ae4-a449-e6bc5785d785/project/5f5f577b-e883-45af-b0ee-f72f4d4fef38.svg)](https://wakatime.com/badge/user/957be417-f277-4ae4-a449-e6bc5785d785/project/5f5f577b-e883-45af-b0ee-f72f4d4fef38)
+[![wakatime](https://wakatime.com/badge/user/957be417-f277-4ae4-a449-e6bc5785d785/project/018b0769-da37-4d29-8fa1-10b51e4fc819.svg)](https://wakatime.com/badge/user/957be417-f277-4ae4-a449-e6bc5785d785/project/018b0769-da37-4d29-8fa1-10b51e4fc819)
 
 Body Measurements is a solution to track and manage your body measurements conveniently. In today's health-conscious world, it is crucial to track your body's progress. MeasureMate is here to simplify this process. This project was designed to help you record and control your body measurements over time. Whether you're on a fitness journey, tracking changes for health reasons, or just curious about your body's progress, Body Measurements has you covered.
 
