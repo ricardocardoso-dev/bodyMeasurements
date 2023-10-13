@@ -13,8 +13,10 @@ namespace api.Entities
         public decimal Chest { get; set; }
         public decimal Waist { get; set; }
         public decimal Hip { get; set; }
-        public decimal RightArm { get; set; }
-        public decimal LeftArm { get; set; }
+        public decimal RelaxedRightArm { get; set; }
+        public decimal RelaxedLeftArm { get; set; }
+        public decimal ContractedRightArm { get; set; }
+        public decimal ContractedLeftArm { get; set; }
         public decimal RightForearm { get; set; }
         public decimal LeftForearm { get; set; }
         public decimal RightThigh { get; set; }
