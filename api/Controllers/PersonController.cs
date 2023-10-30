@@ -68,12 +68,12 @@ namespace api.Controllers
 		}
 
 		[HttpPut]
-		public async Task<ActionResult> Update(Person person)
+		public async Task<ActionResult> Update(int id, Person person)
 		{
 			if (person == null || person.Id == 0)
 				return BadRequest(new ProblemDetails{Title = "Person ID in the request body does not match the route parameter"});
 
-			var storedPerson = await _context.Persons.FindAsync(person.Id);
+			var storedPerson = await _context.Persons.FindAsync(id);
 			if (storedPerson == null)
 				return NotFound(new ProblemDetails { Title = "Person not found" });
 
@@ -86,7 +86,7 @@ namespace api.Controllers
 			storedPerson.Name = person.Name;
 			storedPerson.PersonType = person.PersonType;
 			storedPerson.BirthDate = person.BirthDate;
-			storedPerson.LastChangeDate = DateTime.UtcNow;
+			storedPerson.LastChangeDate = DateTime.Now;
 			storedPerson.UserNameLastChange = "system.person.update";
 
 			return await _context.SaveChangesAsync() > 0 ? Ok(storedPerson) : BadRequest(new ProblemDetails { Title = "Problem updating person" });
