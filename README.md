@@ -21,6 +21,17 @@ Body Measurements is a solution to track and manage your body measurements conve
 - ![Microsoft.EntityFrameworkCore.Sqlite](https://img.shields.io/badge/EF_Sqlite-7.0.11-purple)
 - ![Swashbuckle.AspNetCore](https://img.shields.io/badge/Swashbuckle_Swagger-6.5.0-darkgreen)
 
+## Endpoints (updated 10/29/2023)
+
+### Person
+![image](https://github.com/ricardocardoso-dev/bodyMeasurements/assets/34285579/c65b9cef-0499-4803-b78e-0c6215713fc1)
+
+
+### MeasurementEntries
+![image](https://github.com/ricardocardoso-dev/bodyMeasurements/assets/34285579/839302e4-74c7-4e4e-a971-63c1f7843b8e)
+
+
+
 ## Contributing
 
 1. Fork the repository
