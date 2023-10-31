@@ -17,7 +17,7 @@ namespace api.Controllers
 			_context = context;
 		}
 
-		#region [Methods]
+		#region [Default Methods]
 
 		[HttpGet]
 		public async Task<ActionResult<List<Person>>> Get()
@@ -64,7 +64,10 @@ namespace api.Controllers
 
 			_context.Persons.Remove(person);
 
-			return await _context.SaveChangesAsync() > 0 ? Ok() : BadRequest(new ProblemDetails { Title = "Problem deleting person" });
+			if (await _context.SaveChangesAsync() > 0)
+				return Ok();
+	
+			return BadRequest(new ProblemDetails { Title = "Problem deleting person" });
 		}
 
 		[HttpPut]
@@ -94,7 +97,17 @@ namespace api.Controllers
 		
 		#endregion
 
-
-
+		
+		[HttpGet("GetByType{type}", Name = "GetByType")]
+		public async Task<ActionResult<List<Person>>> GetByType(EPersonType type)
+		{
+			var persons = await _context.Persons.Where(x=> x.PersonType == type)
+												.ToListAsync();
+											   
+			if(persons?.Count == 0)
+				return Ok(Enumerable.Empty<Person>());
+			
+			return persons;
+		}
 	}
 }
