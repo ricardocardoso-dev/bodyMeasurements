@@ -14,6 +14,8 @@ namespace api.Controllers
 			_context = context;
 		}
 
+		#region [ Default Methods ]
+		
 		[HttpGet]
 		public async Task<ActionResult<List<MeasurementEntry>>> Get()
 		{
@@ -107,6 +109,19 @@ namespace api.Controllers
 				: BadRequest(new ProblemDetails { Title = "Problem updating measurementEntry" });
 		}
 	
+		#endregion
+	
+		[HttpGet("GetByPerson/{personId}", Name = "GetByPerson")]
+		public async Task<ActionResult<List<MeasurementEntry>>> GetByPerson(int personId){
+
+			var measurementEntries = await _context.MeasurementEntries.Where(x=> x.PersonId == personId)
+																	  .ToListAsync();
+																	   
+			if(measurementEntries?.Count == 0)
+				return Ok(Enumerable.Empty<MeasurementEntry>());
+				
+			return measurementEntries;
+		}
 	
 	}
 }
